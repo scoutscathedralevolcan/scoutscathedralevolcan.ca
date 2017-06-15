@@ -1,0 +1,5 @@
+# Site settings
+url: "https://scoutscathedralevolcan.netlify.com/"
+
+# Build settings
+markdown: kramdown
