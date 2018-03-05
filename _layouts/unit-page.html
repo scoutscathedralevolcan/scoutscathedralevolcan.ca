@@ -1,0 +1,51 @@
+---
+layout: default
+---
+{% include unit-page-menu.html %}
+
+<section id="{{ page.title }}">
+  <div class="container">
+{% if page.url != "/units/" %}
+    <div class="unit-table">
+    <table class="unit-file-table">
+        <thead>
+            <tr>
+                <th class="unit-file-table-title" colspan="2" >{{page.title}}</th>
+            </tr>
+        <thead>
+        <tbody>
+            <tr>
+                <th class="unit-file-element">Nom de l'unité:</th>
+                <th class="unit-file-element-description">{{page.unit-name}}</th>
+            </tr>{% if page.unit-site-web %}
+            <tr>
+                <th class="unit-file-element">Site web d'unité:</th>
+                <th class="unit-file-element-description"><a href="{{page.unit-site-web}}">{{page.unit-site-web}}</a></th>
+            </tr>{% endif %}
+            <tr>
+                <th class="unit-file-element">Insigne:</th>
+                <th class="unit-file-element-description"> <img src="{{page.insigne}}" alt"insigne" /></th>
+            </tr>
+           <tr>
+                <th class="unit-file-element">Groupe d'âge:</th>
+                <th class="unit-file-element-description">{{page.short}} ans</th>
+            </tr>
+            <tr>
+                <th class="unit-file-element">Division de l'unité:</th>
+                <th class="unit-file-element-description">{{page.division}}</th>
+            </tr>
+            <tr>
+                <th class="unit-file-element">Loi:</th>
+                <th class="unit-file-element-description">{{page.loi}}</th>
+            </tr>
+            <tr>
+                <th class="unit-file-element">Moment de réunion:</th>
+                <th class="unit-file-element-description">{{page.reunion}}</th>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+{% endif %}
+      {{ content }}
+  </div>
+</section>

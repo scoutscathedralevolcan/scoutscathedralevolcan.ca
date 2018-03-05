@@ -1,0 +1,39 @@
+<!-- Navigation -->
+    <nav  class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle navbar-right" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img src="{{ site.logo }}" class="navbar-logo" alt="{{ site.title }}"/>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-left navbar-drop-down" >
+        
+		  {% assign menu-elements = site.data.menu | sort:"weight" %}
+		  {% for nav_item in menu-elements %}
+            {% if page.url == nav_item.url %}
+                    <li><a class="page-scroll" href="#page-top">{{ nav_item.title }}</a>{% include nav-submenu.html submenu=nav_item.submenu %}</li>
+            {% else %}
+                {% if page.url == nav_item.parent-page and nav_item.is-page-section %}
+                    <li><a class="page-scroll" href="{{ nav_item.url | remove_first: nav_item.parent-page }}">{{ nav_item.title }}</a>{% include nav-submenu.html submenu=nav_item.submenu %}</li>
+                {% else %}
+                    <li><a class="page-scroll" href="{{ nav_item.url }}">{{ nav_item.title }}</a>{% include nav-submenu.html submenu=nav_item.submenu %}</li>
+                {% endif %}
+            {% endif %}
+          {% endfor %}
+		  
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+

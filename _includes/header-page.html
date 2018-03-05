@@ -1,0 +1,16 @@
+{% if page.image %}
+  <header style="background-image: url('{{ site.baseurl }}{{page.image}}');">
+{% elsif site.data.defaultValues.default-image %}
+  <header style="background-image: url('{{ site.data.defaultValues.default-image }}');">
+{% else %}
+  <header style="background-color: black;">
+{% endif %} 
+<div class="container">
+    <div class="intro-text">
+	    <div class="intro-heading">{{ page.title }}</div>
+	    {% if page.subtitle %}
+	    <div class="intro-lead-in">{{ page.subtitle }}</div>
+	    {% endif %}
+	</div>
+</div>
+</header> 

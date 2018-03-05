@@ -1,0 +1,67 @@
+  -
+    title: Accueil
+    weight: 0
+    url: "/"
+  -
+    title: Présentation
+    weight: 1
+    url: "/presentation/"
+  -
+    title: Le Groupe
+    weight: 2
+    url: "/groupe/"
+  -
+    title: Nos Unités
+    is-page-section: true
+    parent-page: "/"
+    weight: 3
+    url: "/#unites"
+    submenu:
+      -
+        title: Castors (mixte 7-8 ans)
+        weight: 1
+        url: "/unites/castors"
+      -
+        title: Louveteaux (garçon 9-12 ans)
+        weight: 2
+        url: "/unites/louveteaux"
+      -
+        title: Éclaireurs (mixte 11-15 ans)
+        weight: 3
+        url: "/unites/eclaireurs"
+      -
+        title: Pionniers (mixte 14-18 ans)
+        weight: 4
+        url: "/unites/pionniers"
+      -
+        title: Routiers (mixte 17-25 ans)
+        weight: 5
+        url: "/unites/routiers"
+  -
+    title: Parents
+    weight: 4
+    url: "/parents/"
+  -
+    title: Citoyens
+    weight: 5
+    url: "/citoyens/"
+  -
+    title: Calendrier
+    is-page-section: true
+    parent-page: "/"
+    weight: 6
+    url: "/#calendrier"
+  -
+    title: Actualité
+    weight: 7
+    url: "/actu/"
+  -
+    title: Medias
+    weight: 8
+    url: "/medias/"
+  -
+    title: Nous Joindre
+    is-page-section: true
+    parent-page: "/"
+    weight: 9
+    url: "/#nous-joindre"

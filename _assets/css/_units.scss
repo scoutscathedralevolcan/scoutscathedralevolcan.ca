@@ -1,0 +1,131 @@
+a.unit-presentation-link{
+    color: $text-color;
+}
+
+.unit-presentation-icon{
+    position: float;
+    float: left;
+}
+
+.unit-presentation-icon img{
+    width: 150px;
+    height: 150px;
+}
+
+@media(min-width:$on-more-than-palm-width){
+    .units-navbar {
+        width: 600px;
+        float: center;
+        margin: auto;
+    }
+}
+
+@media(max-width:$max-palm-width){
+    .units-navbar {
+        width: 300px;
+        float: center;
+        margin: auto;
+    }
+}
+
+.units-navbar img {
+    width: 100%;
+    opacity: 0.5;
+}
+
+.units-navbar ul{
+    float: center;
+    text-align:center;
+    white-space: nowrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.units-navbar li {
+    display: block;
+    float:left;
+    max-width: 100px;
+}
+
+.units-navbar li a {
+    font-family: $menu-font-family;
+    font-weight: 400;
+    color: $menu-primary-color;;
+}
+
+.units-navbar li a:hover {
+    color: $menu-secondary-color
+}
+
+.units-navbar a.active img  {
+    opacity: 1;
+}
+
+.units-navbar a.active {
+    color: $menu-secondary-color;
+}
+
+.units-navbar li a:hover img {
+    opacity: 1;
+}
+
+
+.unit-table{
+    margin: 1em;
+}
+
+@media(max-width:$max-palm-width){
+    .unit-table{
+        text-align: center;
+        witdh: 95%;
+        min-width: 300px
+    }
+}
+
+@media(min-width:$max-palm-width){
+    .unit-table{
+        float: left;
+        max-width:400px
+    }
+}
+
+
+
+.unit-file-table{
+  text-align:left;
+  border-top: 3px solid $text-color;
+  border-bottom: 3px solid $text-color;
+  border-right:0;
+  border-left: 0;
+  border-collapse: collapse;
+  font-weight:400;
+  padding: 25px
+}
+
+.unit-file-table .unit-file-table-title{
+    text-transform: uppercase;
+        font-size:1.4em;
+        font-weight: 600;
+        letter-spacing: 2px;
+}
+
+.unit-file-table thead {
+    tr th{
+        border-bottom: 3px solid $text-color;
+    }
+}
+
+.unit-file-table tr th,
+.unit-file-table tbody{
+  padding-top: 0.55em;
+}
+
+.unit-file-element-description{
+  text-align: right;
+}
+
+.unit-file-element-description img{
+    width: 125px;
+    height: 125px;
+}

@@ -1,0 +1,24 @@
+---
+layout: page
+---
+
+<!-- Gallery __-->
+<div class="gallery masonry-gallery">
+{% for gallerie in page.galleries %}  
+    <figure class="gallery-item">
+        <figure class="effect-selena">
+            <header class='gallery-icon'>
+                <a href="/{{ site.data.galleriesphotos.gallerieOutputPath}}/{{gallerie.publishedDate | date: "%Y-%m-%d" }}-{{ gallerie.title | slugify }}">
+                <img src="{{ gallerie.coverImage }}"></a>
+            </header>
+            <figcaption class='gallery-caption'>
+                <div class="entry-summary">
+                    <h3>{{gallerie.title}}</h3>
+                    <p>{{gallerie.description}}</p>
+                    <p>{{gallerie.publishedDate | date: "%Y-%m-%d" }}  - {{ gallerie["images"] | size }} image{% if gallerie["images"].size != 1 %}s{% endif %}</p>
+                </div>
+            </figcaption>
+        </figure>
+    </figure>
+{% endfor %}
+</div>

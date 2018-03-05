@@ -1,0 +1,88 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+@charset "utf-8";
+
+/* latest-actu-background-color: "rgba(254,209,54,.9)" */
+
+
+// Our variables
+$base-font-family: 'Fira Sans', sans-serif;
+$secondary-font-family: 'Roboto', sans-serif;
+$menu-font-family:  'Acme', sans-serif;
+$base-font-size:   16px;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+$text-color:        rgba(255, 255, 255, 1);
+$secondary-text-color:  rgba(200, 200, 200, 1);
+
+$brand-color:       rgba(42, 122, 226, 1);
+$muted-color:       rgba(85, 85, 85, 1);
+
+$grey-color:        #828282;
+$grey-color-light:  lighten($grey-color, 40%);
+$grey-color-dark:   darken($grey-color, 25%);
+
+$links-base-color:       rgba(170, 0, 0, 1);
+$links-interact-color:   rgba(170, 170, 170, 1);
+
+$menu-primary-color:  rgba(85, 0, 0, 1);
+$menu-secondary-color: rgba(170, 170, 170, 1);
+$menu-background-color: rgba(0, 0, 0, 1);
+$menu-background-color-over:  rgba(0,0,0,0.25);
+
+$background-color:  rgba(51, 0, 0, 1);
+$section-a-background-color:      rgba(51, 0, 0, 1);
+$section-b-background-color:      rgba(60, 60, 60, 1);
+
+$latest-actu-background-color: $background-color;
+
+$footer-background-color:   rgba(0,0,0,1);
+$footer-text-color: rgba(255,255,255,1);
+
+
+// Width of the content area
+$on-palm-width:           600px;
+$max-palm-width:    979px;
+$on-more-than-palm-width: 980px;
+
+
+
+// Using media queries with like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+
+// Import partials from `` (defaults to `_sass`)
+@import
+        "bootstrap",
+        "base",
+        "syntax-highlighting",
+        "nav",
+        "header",
+        "content",
+        "footer",
+        "actu",
+        "galeries",
+        "magnificpopup",
+        "selena",
+        "latest-actu",
+        "units",
+        "fullcalendar",
+        "modal",
+        "timeline",
+        "contact-form"
+;

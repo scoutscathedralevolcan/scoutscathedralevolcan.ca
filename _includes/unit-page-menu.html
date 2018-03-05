@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+        <div class="units-navbar">
+        <ul>
+        {% for unitpage in site.pages-unites %}
+            <li>
+                {% if page.url == unitpage.permalink %}
+                <a href="#page-top" class="active">
+                {% else %}
+                <a href="{{unitpage.permalink}}">
+                {% endif %}
+                    <img src="{{unitpage.insigne}}" alt="{{unitpage.title}}"/><br>
+                    {{unitpage.title}}<br>({{unitpage.short}})
+                </a>
+            </li>
+        {% endfor %}
+        </ul>
+        </div>
+    </div>
+</div>

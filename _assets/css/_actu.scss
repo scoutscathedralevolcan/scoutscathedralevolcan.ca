@@ -1,0 +1,50 @@
+.actu-post-list {
+    clear: both;
+    min-width: 100%;
+    margin: 0 0 2em 0;
+}
+.actu-post-list::after {
+    display:block;
+    content:"";
+    clear: both;
+}
+.actu-post-list {
+    zoom:1; /* For IE 6/7 (trigger hasLayout) */
+}
+.actu-post { display: block; }
+.actu-post-icon { position: relative; z-index: 9;  -webkit-transition: opacity .2s ease; -moz-transition: opacity .2s ease; -ms-transition: opacity .2s ease; -o-transition: opacity .2s ease; transition: opacity .2s ease; }
+.actu-post-icon a { display: block; width: 100%; height: 100%; position: relative; z-index: 9; }
+.actu-post-icon img { max-width: 100%; height: auto; margin: 0px; }
+
+
+.actu-post {
+    padding: 10px 1% 10px 1%;
+    width: 48% !important;
+    max-width: 48%;
+}
+
+@media screen and (max-width: $max-palm-width) {
+	.actu-post {
+        padding: 10px 1% 10px 1%;
+        width: 48% !important;
+        max-width: 48%;
+    }
+    
+    .container{
+        width: 97%;
+    }
+}
+
+
+
+@media screen and (max-width: $on-palm-width) {
+	.actu-post {
+        width: 100% !important;
+        max-width: 100%
+    }
+    
+    .container{
+        width: 95%;
+    }
+}
+

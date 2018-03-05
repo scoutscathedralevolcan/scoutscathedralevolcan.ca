@@ -1,0 +1,262 @@
+.navbar-logo {
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    width:60px;
+    height:50px;
+}
+
+.navbar-default {
+    border-color: transparent;
+    background-color: $menu-background-color;
+}
+
+.navbar-default .navbar-brand {
+    font-family: $menu-font-family;
+    color: $menu-primary-color;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus,
+.navbar-default .navbar-brand:active,
+.navbar-default .navbar-brand.active {
+    color: $menu-secondary-color;
+}
+
+.navbar-default .navbar-collapse {
+    border-color: rgba(255,255,255,.02);
+}
+
+.navbar-default .navbar-toggle {
+    border-color: $menu-primary-color;
+    background-color: $menu-primary-color;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: $menu-primary-color;
+}
+
+.navbar-default .nav li a,
+.navbar-default .nav li a:focus {
+    padding: 10px;
+    margin: 5px 0;
+    text-transform: uppercase;
+    font-family: $menu-font-family;
+    font-weight: 200;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: $menu-secondary-color;
+    -webkit-transition: all ease .35s;
+    -moz-transition: all ease .35s;
+    transition: all ease .35s;
+}
+
+.navbar-default .nav li a:hover {
+    outline: 0;
+    color: $menu-primary-color;
+    background-color: $menu-secondary-color;
+}
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus {
+    border-radius: 0;
+    color: $menu-secondary-color;
+    background-color: $menu-primary-color;
+}
+
+.navbar-default .navbar-nav>.active>a:hover {
+    color: $menu-primary-color;
+    background-color: $menu-secondary-color;
+}
+
+@media(min-width:$on-more-than-palm-width) {
+    .navbar-default {
+        padding: 5px 0;
+        border: 0;
+        background-color: $menu-background-color-over;
+        -webkit-transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        -ms-transition: all 1s ease;
+        transition: all 1s ease;
+    }
+
+    .navbar-default .navbar-brand {
+        font-size: 2em;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        transition: all .3s;
+    }
+
+    .navbar-default .navbar-nav>.active>a {
+        border-radius: 3px;
+    }
+
+    .navbar-default.navbar-shrink {
+        padding: 5px 0;
+        background-color: $menu-background-color;
+        -webkit-transition: all 1s ease;
+        -moz-transition: all 1s ease;
+        -o-transition: all 1s ease;
+        -ms-transition: all 1s ease;
+        transition: all 1s ease;
+    }
+
+    .navbar-default.navbar-shrink .navbar-brand {
+        font-size: 1.5em;
+    }
+    
+    .navbar-drop-down ul {
+        display:none;
+        position:absolute;
+        width: 220px;
+        top:100%;
+        left:-30px;
+        background:black;
+        padding:0;
+        z-index: 10;
+    }
+    
+    .navbar-drop-down ul ul {
+        display:none;
+        position:absolute;
+        width: 220px;
+        top:-5px;
+        left:190px;
+        background:black;
+        padding:0;
+        z-index: 11;
+    }
+    
+    .navbar-drop-down li:hover > ul
+    {
+        display:block
+    }
+}
+
+.navbar-drop-down ul {
+    list-style-type: none;
+}
+
+.navbar-drop-down ul li a,
+.navbar-drop-down ul li a:hover{
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+
+
+
+.btn-primary {
+    border-color: $menu-primary-color;
+    text-transform: uppercase;
+    font-family: $menu-font-family;
+    font-weight: 700;
+    color: $menu-secondary-color;
+    background-color: $menu-primary-color;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+    border-color: $menu-primary-color;
+    color: $menu-primary-color;
+    background-color: $menu-secondary-color;
+}
+
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+    background-image: none;
+}
+
+.btn-primary.disabled,
+.btn-primary[disabled],
+fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled].active,
+fieldset[disabled] .btn-primary.active {
+    border-color: $menu-primary-color;
+    background-color: $menu-primary-color;
+}
+
+.btn-primary .badge {
+    color: $menu-primary-color;
+    background-color: #fff;
+}
+
+.btn-xl {
+    padding: 20px 40px;
+    border-color: $menu-primary-color;
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-family: $menu-font-family;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    background-color: $menu-primary-color;
+}
+
+.btn-xl:hover,
+.btn-xl:focus,
+.btn-xl:active,
+.btn-xl.active,
+.open .dropdown-toggle.btn-xl {
+    border-color: $menu-primary-color;
+    color: #fff;
+    background-color: $menu-secondary-color;
+}
+
+.btn-xl:active,
+.btn-xl.active,
+.open .dropdown-toggle.btn-xl {
+    background-image: none;
+}
+
+.btn-xl.disabled,
+.btn-xl[disabled],
+fieldset[disabled] .btn-xl,
+.btn-xl.disabled:hover,
+.btn-xl[disabled]:hover,
+fieldset[disabled] .btn-xl:hover,
+.btn-xl.disabled:focus,
+.btn-xl[disabled]:focus,
+fieldset[disabled] .btn-xl:focus,
+.btn-xl.disabled:active,
+.btn-xl[disabled]:active,
+fieldset[disabled] .btn-xl:active,
+.btn-xl.disabled.active,
+.btn-xl[disabled].active,
+fieldset[disabled] .btn-xl.active {
+    border-color: $menu-primary-color;
+    background-color: $menu-primary-color;
+}
+
+.btn-xl .badge {
+    color: $menu-primary-color;
+    background-color: #fff;
+}
+
+.btn:focus,
+.btn:active,
+.btn.active,
+.btn:active:focus {
+    outline: 0;
+}

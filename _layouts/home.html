@@ -1,0 +1,32 @@
+---
+layout: default
+---
+{% assign sorted-home-sections = site.home-sections | sort:"weight"  %}
+{% for home-section in sorted-home-sections %}
+    {% if home-section.published != false %}
+        {% if home-section.title %}
+        <!-- {{ navscroll_item.title }} Section -->
+        {% endif %}
+        {% if sectionbgcolor == "section-a-background" %}
+            {% assign sectionbgcolor = "section-b-background" %}
+        {% else %}
+            {% assign sectionbgcolor = "section-a-background" %}
+        {% endif %}
+    <homesection id="{{ home-section.section-id }}" class="{{sectionbgcolor}} image-background-cover" {% if home-section.background-image %} style="background-image: url('{{home-section.background-image}}')" {% endif %}>
+        <div class="container">
+        {% if home-section.section-title %}
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">{{ home-section.section-title }}</h2>
+                </div>
+            </div>
+        {% endif %}
+            <div class="row">
+                <div class="col-lg-12 text-justify">
+                    {{ home-section.content }}
+                </div>
+            </div>
+        </div>
+    </homesection>
+    {% endif %}
+{% endfor %}

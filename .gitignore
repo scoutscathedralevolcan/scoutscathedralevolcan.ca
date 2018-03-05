@@ -1,5 +1,8 @@
 _site
 .sass-cache
 .asset-cache
+.jekyll-cache
 .users.yml
 Gemfile.lock
+cert.pem
+key.pem

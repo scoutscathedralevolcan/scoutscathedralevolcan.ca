@@ -1,0 +1,16 @@
+{% if include.submenu %}
+    {% assign submenu-elements = include.submenu | sort:"weight" %}
+    <ul class="nav">
+    {% for nav_subitem in submenu-elements %}
+        {% if page.url == nav_subitem.url %}
+                <li><a class="page-scroll" href="#page-top">{{ nav_subitem.title }}</a>{% include nav-subsubmenu.html subsubmenu=nav_subitem.submenu %}</li>
+        {% else %}
+            {% if page.url == nav_subitem.parent-page and nav_subitem.is-page-section %}
+                <li><a class="page-scroll" href="{{ nav_subitem.url | remove_first: nav_subitem.parent-page }}">{{ nav_subitem.title }}</a>{% include nav-subsubmenu.html subsubmenu=nav_subitem.submenu %}</li>
+            {% else %}
+                <li><a class="page-scroll" href="{{ nav_subitem.url }}">{{ nav_subitem.title }}</a>{% include nav-subsubmenu.html subsubmenu=nav_subitem.submenu %}</li>
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+    </ul>
+{% endif %}

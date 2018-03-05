@@ -1,0 +1,19 @@
+---
+layout: page
+---
+
+<div class="gallery masonry-gallery">
+{% for image in page.gallerie.images %}  
+  <figure class="gallery-item">
+    <header class='gallery-icon'>
+      <a href="{{ image.url }}" class="popup"  title="{{ image.description }}">
+      <img src="{{ image.url }}"></a>
+    </header>
+    <figcaption class='gallery-caption'>
+        <div class="entry-summary" id="{{ image.description | slugify }}">
+          <h3>{{image.description}}</h3>
+        </div>
+    </figcaption>
+  </figure>
+{% endfor %}
+</div>

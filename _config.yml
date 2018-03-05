@@ -1,5 +1,92 @@
 # Site settings
-url: "https://scoutscathedralevolcan.netlify.com/"
+url: "https://www.scoutscathedralevolcan.ca"
+title: Groupe Scout Cathédrale-Volcan
+author: Groupe Scout Cathédrale-Volcan
+logo: /img/logo.png
+lang: fr_CA
+description: >
+  Site web du Groupe Scout Cathédrale Volcan. Nous cherchons à promouvoir et soutenir l’éducation des jeunes afin qu’ils puissent jouer un rôle actif dans la société pour construire un monde meilleur, selon les valeurs suivantes&#58; le respect, l’efficacité, l’engagement et la Loi scoute.
+facebook:
+  publisher: scoutscathedralevolcan
+owner: Groupe Scout Cathédrale-Volcan
+phone: 1 450-773-2351
+adress: >
+    900-A av de l&#39;École,<br>
+    Case Postale 778<br>
+    Saint-Hyacinthe<br>
+    Québec Canada J2S 7P5
+github: scoutscathedralevolcan
+
+pagination-post-on-home-page: 3
 
 # Build settings
 markdown: kramdown
+
+sass:
+  style: compressed
+
+defaults:
+  -
+    scope:
+      path: 'admin'
+    values:
+      sitemap: false
+  -
+    scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      permalink: /actu/:year/:month/:day/:title/
+      layout: post
+      alt: image-alt
+
+collections:
+    pages-unites:
+        output: true
+    sitepages:
+        output: true
+    home-sections:
+        output: false
+    pages-presentation:
+        output: true
+    pages-groupe:
+        output: true
+    pages-parhents:
+        output: true
+    pages-citoyens:
+        output: true
+
+paginate: 6
+paginate_path: "/actu/all/page:num"
+
+exclude: ["Gemfile","Gemfile.lock","generate-photo-galleries.sh", "*.gallerie.conf", ".*.conf", "README.md", ".asset-cache"]
+
+plugins:
+ - jekyll-sitemap
+ - jekyll-paginate
+ - jekyll-assets
+ - jekyll-seo-tag
+
+# SiteMap
+sitemap:
+    file: "/sitemap.xml"
+    exclude:
+        - "/feed.xml"
+    change_frequency_name: "change_frequency"
+    priority_name: "priority"
+
+assets:
+  source_maps: false
+  compression: true
+  compress:
+    js: true
+    css: true
+  prefix: "/"
+  digest: true
+  caching:
+    enabled: true
+  sources:
+    - "_assets"
+  assets:
+    - "js/*.js"
+    - "css/main.scss"
