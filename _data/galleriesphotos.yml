@@ -1,5 +1,5 @@
-gallerieOutputPath: medias
-gallerieIndexTitle: Medias
+gallerieOutputPath: galeries
+gallerieIndexTitle: Galeries photos
 galleries:
   - title: Camp d'hiver 2018 Castors
     id: 6525153906026935361

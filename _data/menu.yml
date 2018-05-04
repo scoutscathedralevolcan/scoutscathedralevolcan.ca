@@ -22,29 +22,33 @@
         weight: 1
         url: "/unites/castors"
       -
-        title: Louveteaux (garçon 9-12 ans)
+        title: Louveteaux (filles 9-11 ans)
         weight: 2
-        url: "/unites/louveteaux"
+        url: "/unites/louveteaux-filles"
       -
-        title: Éclaireurs (mixte 11-15 ans)
+        title: Louveteaux (garçon 9-11 ans)
         weight: 3
+        url: "/unites/louveteaux-garcons"
+      -
+        title: Éclaireurs (mixte 11-14 ans)
+        weight: 4
         url: "/unites/eclaireurs"
       -
-        title: Pionniers (mixte 14-18 ans)
-        weight: 4
+        title: Pionniers (mixte 14-17 ans)
+        weight: 5
         url: "/unites/pionniers"
       -
         title: Routiers (mixte 17-25 ans)
-        weight: 5
+        weight: 6
         url: "/unites/routiers"
   -
     title: Parents
     weight: 4
     url: "/parents/"
   -
-    title: Citoyens
+    title: Communauté
     weight: 5
-    url: "/citoyens/"
+    url: "/communaute/"
   -
     title: Calendrier
     is-page-section: true
@@ -52,13 +56,21 @@
     weight: 6
     url: "/#calendrier"
   -
-    title: Actualité
-    weight: 7
-    url: "/actu/"
-  -
     title: Medias
+    weight: 7
+    url: "#"
+    submenu:
+      - 
+        title: Actualité
+        weight: 1
+        url: "/actu"
+      - 
+        title: Galeries photo
+        url: "/galeries"
+  -
+    title: FAQ
     weight: 8
-    url: "/medias/"
+    url: "/faq"
   -
     title: Nous Joindre
     is-page-section: true

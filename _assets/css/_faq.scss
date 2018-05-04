@@ -1,0 +1,217 @@
+.faq {
+  margin: 0 auto;
+}
+
+.faq-section {
+  padding: 20px 0;
+  border-bottom: 1px dotted #ccc;
+}
+
+.panel-title {
+  font-size: 24px;
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 10px 10px 0 48px;
+  display: block;
+  cursor: pointer;
+}
+
+.panel-content {
+  font-size: 20px;
+  padding: 0px 14px;
+  margin: 0 40px;
+  height: 0;
+  overflow: hidden;
+/*   z-index: -1; */
+  position: relative;
+  opacity: 0;
+  -webkit-transition: .4s ease;
+  -moz-transition: .4s ease;
+  -o-transition: .4s ease;
+  transition: .4s ease;
+}
+
+.panel:checked ~ .panel-content{
+  height: auto;
+  opacity: 1;
+  padding: 14px;
+}
+
+.plus {
+  position: absolute;
+  margin-left: 20px;
+  margin-top: 4px;
+  z-index: 5;
+  font-size: 42px;
+  line-height: 100%;
+  -webkit-user-select: none;    
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  -webkit-transition: .2s ease;
+  -moz-transition: .2s ease;
+  -o-transition: .2s ease;
+  transition: .2s ease;
+}
+
+.panel:checked ~ .plus {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.panel {
+  display: none;
+}
+
+%visually-hidden{
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+  
+.faq-questions-list{
+  margin: 15px 0;
+  padding: 0 15px;
+  border-top: 1px solid transparent; // uncollapse margins
+  border-bottom: 1px solid transparent;
+}
+
+// the divider between titles and questions
+// .faq-questions-list::before
+//   width: 2px
+//   height: 100%
+//   left: 50%
+//   position: absolute
+//   background: #1e88e5
+//   opacity: 0
+//   transform-origin: 0 50%
+//   content: ''  
+
+  
+// a wrapper for each faq
+.faq-question{
+  list-style: none;
+  margin: 10px 0 5px;
+}
+
+.faq-question-title{
+  cursor: pointer;
+  font-weight: 500;
+  z-index: 10;
+  position: relative;
+  font-size: 1.1em;
+}
+
+.faq-question-title:hover{
+    text-decoration: underline;
+}
+.faq-question-title::after{
+    white-space: nowrap;
+    font-weight: 300;
+    padding-left: 5px;
+    opacity: 0;
+    transform-origin: 11px;
+    transform: rotateZ(90deg);
+    display: none;
+    content: '>';
+}
+
+// active faqs should be a little different
+.faq-question-active .faq-question-title{
+  color: $links-base-color;
+}
+  // the > icon
+.faq-question-active .faq-question-title::after{
+    opacity: 1;
+    transform: rotateZ(90deg);
+    display: inline-block;
+}
+
+// the actual body of answer
+.faq-answer{
+  @extend %visually-hidden;
+  font-weight: normal;
+  margin-top: -10%;
+  transition: all 0.1s;
+  z-index: 1;
+  font-size: 0.9em;
+  color: #B0B0B0;
+}
+
+.faq-question-active .faq-answer{
+  opacity: 1;
+  position: relative;
+  top: 0;
+  left: 0;
+  font-weight: 300;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  transition: all 0.2s;
+  border-top: 3px solid $links-base-color;
+  padding: 20px;
+}
+  
+@media (min-width: 780px) {
+  // use this as the 'wrapper' to position the answer
+  .faq-questions-list{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+  }
+    
+  // the bar betweeen question and answer
+  .faq-questions-list::before {
+    opacity: 0.2;
+  }
+    
+  .faq-question{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    
+    // title and answer shouldn't touch
+    .faq-question-title{
+      width: 50%;
+      padding-right: 40px;
+      display: inline-block;
+    }
+      // the > icon
+    .faq-question-title::after{
+        display: none;
+    }
+
+    // make this ver center, because questions will always will be higher :)
+    .faq-answer{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 50%;
+      width: 50%;
+      border-left: 3px solid $links-base-color;
+      border-top: none;
+    }
+  }
+}
+.c-note{
+  font-size: 0.8em;
+  padding-left: 15px;
+  opacity: 0.5;
+  transition: opacity 0.2s ease-in-out;
+}
+  
+.c-note:hover{
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+}
+  
+.c-note a{
+    color: #1e88e5;
+}
+
+
+
+
