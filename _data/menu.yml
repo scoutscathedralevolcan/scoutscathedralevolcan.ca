@@ -30,11 +30,11 @@
         weight: 3
         url: "/unites/louveteaux-garcons"
       -
-        title: Éclaireurs (mixte 11-14 ans)
+        title: Éclaireurs (mixte 12-14 ans)
         weight: 4
         url: "/unites/eclaireurs"
       -
-        title: Pionniers (mixte 14-17 ans)
+        title: Pionniers (mixte 15-17 ans)
         weight: 5
         url: "/unites/pionniers"
       -
